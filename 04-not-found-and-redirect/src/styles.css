@@ -1,0 +1,82 @@
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #172033;
+  background: #f4f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+.app {
+  width: min(760px, calc(100% - 32px));
+  margin: 40px auto;
+}
+
+nav,
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+a {
+  color: #3559c7;
+}
+
+nav a,
+button {
+  border: 1px solid #b8c4e5;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background: #fff;
+  text-decoration: none;
+}
+
+.panel,
+.card {
+  border: 1px solid #dce3f0;
+  border-radius: 12px;
+  padding: 20px;
+  background: #fff;
+}
+
+.card-list {
+  display: grid;
+  gap: 12px;
+  padding: 0;
+  list-style: none;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+input,
+select {
+  border: 1px solid #b8c4e5;
+  border-radius: 8px;
+  padding: 8px 10px;
+}
+
+.hint {
+  color: #536078;
+}
