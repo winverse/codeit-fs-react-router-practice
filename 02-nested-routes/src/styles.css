@@ -48,6 +48,11 @@ button {
   text-decoration: none;
 }
 
+nav a.active {
+  background: #3559c7;
+  color: #fff;
+}
+
 .panel,
 .card {
   border: 1px solid #dce3f0;

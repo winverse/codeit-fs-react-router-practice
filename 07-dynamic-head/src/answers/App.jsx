@@ -3,7 +3,11 @@ import { Link, Route, Routes } from 'react-router';
 function HomePage() {
   return (
     <section className="panel">
-      {/* TODO: 홈 페이지의 title과 description meta를 추가하세요. */}
+      <title>홈 | Router 학습</title>
+      <meta
+        name="description"
+        content="React Router의 기본 개념을 연습하는 홈 페이지입니다."
+      />
       <h2>홈</h2>
       <p>브라우저 탭의 제목과 문서의 description 메타 정보를 확인하세요.</p>
     </section>
@@ -13,7 +17,11 @@ function HomePage() {
 function AboutPage() {
   return (
     <section className="panel">
-      {/* TODO: 소개 페이지의 title과 description meta를 추가하세요. */}
+      <title>소개 | Router 학습</title>
+      <meta
+        name="description"
+        content="React title과 meta 태그 사용 방법을 소개하는 페이지입니다."
+      />
       <h2>소개</h2>
       <p>React 19는 컴포넌트의 title과 meta를 문서 head에 반영합니다.</p>
     </section>

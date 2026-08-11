@@ -25,7 +25,7 @@ function NewPostPage() {
 export default function App() {
   return (
     <div className="app">
-      <h1>중첩 라우팅 실습</h1>
+      <h1>중첩 라우팅</h1>
       <nav aria-label="주요 메뉴">
         <Link to="/">홈</Link>
         <Link to="/community">커뮤니티</Link>

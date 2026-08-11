@@ -1,4 +1,19 @@
-import { Link, Route, Routes } from 'react-router';
+import { Link, Route, Routes, useLocation, useNavigate } from 'react-router';
+
+function HistoryControls() {
+  const navigate = useNavigate();
+
+  return (
+    <div className="controls" aria-label="방문 기록 이동">
+      <button type="button" onClick={() => navigate(-1)}>
+        뒤로
+      </button>
+      <button type="button" onClick={() => navigate(1)}>
+        앞으로
+      </button>
+    </div>
+  );
+}
 
 function HomePage() {
   return (
@@ -10,10 +25,20 @@ function HomePage() {
 }
 
 function LoginPage() {
+  const navigate = useNavigate();
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    navigate('/dashboard', {
+      replace: true,
+      state: { message: '로그인되었습니다.' },
+    });
+  };
+
   return (
     <section className="panel">
       <h2>로그인</h2>
-      <form onSubmit={(event) => event.preventDefault()}>
+      <form onSubmit={handleSubmit}>
         <input
           aria-label="이름"
           name="name"
@@ -22,18 +47,17 @@ function LoginPage() {
         />
         <button type="submit">로그인</button>
       </form>
-      <p className="hint">
-        TODO: 제출하면 useNavigate로 /dashboard에 이동하세요.
-      </p>
     </section>
   );
 }
 
 function DashboardPage() {
+  const location = useLocation();
+
   return (
     <section className="panel">
       <h2>대시보드</h2>
-      <p>로그인 후 이동할 화면입니다.</p>
+      <p>{location.state?.message ?? '로그인 후 이동한 화면입니다.'}</p>
     </section>
   );
 }
@@ -42,10 +66,7 @@ export default function App() {
   return (
     <div className="app">
       <h1>프로그래밍 방식으로 이동하기</h1>
-      <p className="hint">
-        TODO: navigate(-1)은 뒤로, navigate(1)은 앞으로 이동하는 버튼을
-        만드세요.
-      </p>
+      <HistoryControls />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/login" element={<LoginPage />} />

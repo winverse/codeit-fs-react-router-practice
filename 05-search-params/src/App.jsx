@@ -38,7 +38,7 @@ function SearchPage() {
 export default function App() {
   return (
     <div className="app">
-      <h1>검색 파라미터 실습</h1>
+      <h1>검색 파라미터</h1>
       <Routes>
         <Route path="/" element={<SearchPage />} />
       </Routes>

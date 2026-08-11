@@ -40,8 +40,11 @@ export default function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/profile" element={<ProfilePage />} />
-        {/* TODO: /legacy-profile을 /profile로 대체 이동시키세요. */}
-        {/* TODO: 일치하지 않는 모든 경로에 NotFoundPage를 표시하세요. */}
+        <Route
+          path="/legacy-profile"
+          element={<Navigate to="/profile" replace={true} />}
+        />
+        <Route path="*" element={<NotFoundPage />} />
       </Routes>
     </div>
   );
