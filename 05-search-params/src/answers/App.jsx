@@ -61,6 +61,7 @@ function SearchPage() {
         <input
           aria-label="검색어"
           defaultValue={query}
+          key={query}
           name="query"
           placeholder="상품 이름"
         />
