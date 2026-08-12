@@ -1,17 +1,18 @@
 import { Link } from 'react-router';
+// TODO 1: 이 주석 바로 아래에서 react-router의 useParams를 import하세요.
+// TODO 2: TODO 1 import 바로 아래에서 ../../data/products의 products를 import하세요.
 import styles from './ProductDetailPage.module.css';
 
 export function ProductDetailPage() {
-  // TODO 1: useParams를 import하고 URL에서 productId를 가져오세요.
-  // TODO 2: products를 import하고 productId와 일치하는 상품을 찾으세요.
-  // HINT: 배열의 find 메서드를 사용합니다.
+  // TODO 3: 아래 placeholder product 객체 전체를 useParams 호출과 products.find 결과로 교체하세요.
+  // 교체 범위는 다음 const product = { 부터 닫는 }; 까지입니다.
   const product = {
     name: '상품 상세 구현 전',
     price: 0,
     description: '위 TODO를 구현하여 URL에 맞는 상품을 표시하세요.',
   };
 
-  // TODO 3: 만약 product가 존재하지 않는다면, 아래 "상품을 찾을 수 없습니다" 메시지를 보여주세요.
+  // TODO 4: product가 없으면 이 주석 바로 아래에서 "상품을 찾을 수 없습니다" 안내를 먼저 반환하세요.
   // HINT: if (condition) {}
 
   return (

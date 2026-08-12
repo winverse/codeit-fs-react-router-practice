@@ -1,12 +1,14 @@
+// TODO 1: 이 주석 바로 아래에서 react-router의 useNavigate를 import하세요.
+
 export function ContactPage() {
-  // TODO 1: react-router에서 useNavigate를 import하고 호출하여 navigate 함수를 가져오세요.
+  // TODO 2: 이 주석 바로 아래에서 useNavigate를 호출해 navigate 함수를 가져오세요.
 
   const handleSubmit = (event) => {
     event.preventDefault();
     // 이 예제에서는 폼 데이터 처리 로직은 생략하고, 제출 즉시 성공했다고 가정합니다.
     alert('문의가 성공적으로 제출되었습니다!');
 
-    // TODO 2: "/success" 경로로 이동하면서 현재 history 항목을 교체하세요.
+    // TODO 3: 이 주석 바로 아래에서 "/success"로 이동하며 현재 history 항목을 교체하세요.
     // HINT: replace: true 옵션을 사용하여, 뒤로가기 시 이 페이지로 돌아오지 않도록 합니다.
   };
 

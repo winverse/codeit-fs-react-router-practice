@@ -4,9 +4,19 @@
 
 - 폼 제출 뒤 `useNavigate`로 이동하고 history 항목을 교체할 수 있다.
 
+## 시작 상태
+
+Home·Contact·Success 페이지와 세 Route, 문의 폼의 submit handler가 준비되어 있습니다. `useNavigate` import·호출과 성공 경로 이동만 TODO 상태입니다.
+
+## 실행하기
+
+이 폴더에서 `npm install` 뒤 `npm run dev`를 실행합니다.
+
 ## 수정할 파일
 
 - `src/pages/Contact/ContactPage.jsx`
+
+TODO 1은 파일 최상위 import, TODO 2는 `ContactPage` 함수 시작 부분의 훅 호출, TODO 3은 alert 바로 뒤의 이동 코드 삽입 위치입니다.
 
 ## 해야 할 일
 

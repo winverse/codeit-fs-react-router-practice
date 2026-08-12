@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 export function PortfolioPage() {
   return (
     <div className="page-content">
-      {/* TODO: 이 페이지의 title, description, Open Graph metadata를 추가하세요. */}
+      {/* TODO: 이 주석 위치에 title, description, /og-image.svg를 포함한 Open Graph metadata를 추가하세요. */}
 
       <div className="page-header">
         <h1>포트폴리오</h1>

@@ -4,9 +4,19 @@
 
 - `Navigate`와 catch-all Route로 redirect와 404 화면을 구현할 수 있다.
 
+## 시작 상태
+
+Home·Profile·NotFound 페이지와 기본 Route는 준비되어 있습니다. 이전 주소 redirect와 catch-all Route만 `src/App.jsx`의 TODO 상태입니다.
+
+## 실행하기
+
+이 폴더에서 `npm install` 뒤 `npm run dev`를 실행합니다.
+
 ## 수정할 파일
 
 - `src/App.jsx`
+
+import TODO와 두 Route TODO가 정확한 삽입 위치이며, Route는 Profile Route 바로 뒤의 두 주석 순서대로 추가합니다.
 
 ## 해야 할 일
 

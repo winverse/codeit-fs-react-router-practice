@@ -13,7 +13,7 @@ export function PortfolioPage() {
         property="og:description"
         content="React와 React Router로 만든 프로젝트들을 구경해보세요."
       />
-      <meta property="og:image" content="/og-image.png" />
+      <meta property="og:image" content="/og-image.svg" />
       <meta property="og:image:alt" content="포트폴리오 대표 이미지" />
 
       <div className="page-header">

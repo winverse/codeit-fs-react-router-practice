@@ -10,9 +10,11 @@ export function App() {
     <Routes>
       <Route path="/" element={<Layout />}>
         <Route index={true} element={<HomePage />} />
-        {/* TODO: 1. /products 경로에 중첩 라우팅을 설정하세요 element={<ProductsPage />}*/}
-        {/* TODO: 2. /products 내부에 index route를 추가하세요 (ProductsHomePage) */}
-        {/* TODO: 3. /products 내부에 category 경로를 추가하세요 (CategoryPage) */}
+        {/* TODO 1: 바로 아래 부모 Route의 path=""를 "products"로, element={null}을 <ProductsPage />로 교체하세요. */}
+        <Route path="" element={null}>
+          {/* TODO 2: 이 부모 Route 안에 ProductsHomePage index Route를 추가하세요. */}
+          {/* TODO 3: TODO 2 바로 뒤에 CategoryPage의 category 자식 Route를 추가하세요. */}
+        </Route>
       </Route>
     </Routes>
   );

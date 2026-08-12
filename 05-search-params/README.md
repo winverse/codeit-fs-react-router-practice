@@ -4,13 +4,23 @@
 
 - `useSearchParams`로 검색·정렬 상태를 URL과 연결할 수 있다.
 
+## 시작 상태
+
+검색 폼·정렬 버튼·상품 데이터와 임시 전체 목록 렌더링은 준비되어 있습니다. URL 읽기·갱신, 필터·정렬, 조건부 결과 UI는 TODO 상태입니다.
+
+## 실행하기
+
+이 폴더에서 `npm install` 뒤 `npm run dev`를 실행합니다.
+
 ## 수정할 파일
 
 - `src/pages/Search/SearchPage.jsx`
 
+TODO 1은 파일 최상위 import, TODO 2는 훅 호출 위치입니다. `handleSort(sortType)`의 매개변수는 준비되어 있으므로 TODO 5에서는 바로 아래 `void sortType;` 한 줄을 함수 본문으로 교체합니다. TODO 7은 주석 바로 아래의 기존 `ul` 전체 교체 범위입니다.
+
 ## 해야 할 일
 
-- [ ] `search`와 `orderBy` 쿼리 파라미터를 읽는다.
+- [ ] TODO 1·2에서 `useSearchParams`를 import하고 호출한 뒤 `search`와 `orderBy`를 읽는다.
 - [ ] 검색 폼을 제출하면 `search`를 갱신한다.
 - [ ] 정렬 버튼을 누르면 `search`를 유지하며 `orderBy`를 갱신한다.
 - [ ] 상품 이름을 필터링하고 가격 오름차순 또는 내림차순으로 정렬한다.
