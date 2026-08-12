@@ -13,7 +13,8 @@ export function SearchPage() {
   const handleSubmit = (e) => {
     e.preventDefault();
     // TODO 4: 이 주석 위치에서 form의 'search' input 값을 가져와 search 파라미터를 업데이트하세요.
-    // HINT: formData를 이용하여 검색어를 구하고, setSearchParams({ search: `${검색어}` }); 부분을 채우시면 됩니다.
+    // HINT: formData로 검색어를 구하고, new URLSearchParams(searchParams)로 복사한 뒤 search만 set 또는 delete하세요.
+    // 마지막에 setSearchParams(nextParams)를 호출합니다.
   };
 
   const handleSort = (sortType) => {
