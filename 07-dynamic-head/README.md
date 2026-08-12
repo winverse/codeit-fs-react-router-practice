@@ -6,7 +6,7 @@
 
 ## 시작 상태
 
-Home·About의 metadata와 Portfolio·Contact 본문·Route는 준비되어 있습니다. Portfolio·Contact의 TODO 위치에 라우트별 metadata를 추가하며 `public/og-image.svg`는 제공됩니다.
+Home 화면과 Portfolio·Contact 본문·Route는 준비되어 있습니다. Portfolio·Contact의 TODO 위치에 라우트별 metadata를 추가하며 `public/og-image.svg`는 제공됩니다.
 
 ## 실행하기
 
