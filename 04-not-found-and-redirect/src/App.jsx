@@ -1,48 +1,28 @@
-import { Link, Navigate, Route, Routes } from 'react-router';
+import { Routes, Route, Link } from 'react-router';
+import { HomePage } from './pages/Home';
+import { ProfilePage } from './pages/Profile';
+// TODO: NotFoundPage를 import 해주세요.
 
-function HomePage() {
-  return (
-    <section className="panel">
-      <h2>홈</h2>
-      <p>리다이렉트와 찾을 수 없는 경로를 확인해 보세요.</p>
-    </section>
-  );
-}
-
-function ProfilePage() {
-  return (
-    <section className="panel">
-      <h2>프로필</h2>
-      <p>새 프로필 주소입니다.</p>
-    </section>
-  );
-}
-
-function NotFoundPage() {
-  return (
-    <section className="panel">
-      <h2>페이지를 찾을 수 없습니다.</h2>
-      <Link to="/">홈으로</Link>
-    </section>
-  );
-}
-
-export default function App() {
+export function App() {
   return (
     <div className="app">
-      <h1>리다이렉트와 Not Found</h1>
-      <nav aria-label="예제 메뉴">
-        <Link to="/">홈</Link>
-        <Link to="/profile">프로필</Link>
-        <Link to="/legacy-profile">이전 프로필 주소</Link>
-        <Link to="/missing">없는 주소</Link>
-      </nav>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/profile" element={<ProfilePage />} />
-        {/* TODO: /legacy-profile을 /profile로 대체 이동시키세요. */}
-        {/* TODO: 일치하지 않는 모든 경로에 NotFoundPage를 표시하세요. */}
-      </Routes>
+      <header>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/profile">Profile</Link>
+        </nav>
+      </header>
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/profile" element={<ProfilePage />} />
+          {/* TODO: /old-home 경로로 접속하면 / 로 리다이렉트 시키세요. */}
+          {/* HINT: Navigate 컴포넌트를 사용하고, replace prop을 true로 설정하세요. */}
+
+          {/* TODO: 위의 어떤 경로와도 일치하지 않으면 NotFoundPage를 보여주세요. */}
+          {/* HINT: path="*" 를 사용하면 모든 경로와 일치시킬 수 있습니다. */}
+        </Routes>
+      </main>
     </div>
   );
 }

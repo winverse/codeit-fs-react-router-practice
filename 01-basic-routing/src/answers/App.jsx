@@ -1,35 +1,27 @@
 import { Link, Route, Routes } from 'react-router';
+import { AboutPage } from './pages/AboutPage';
+import { HomePage } from './pages/HomePage';
+import { ServicesPage } from './pages/ServicesPage';
+import styles from './App.module.css';
 
-function HomePage() {
+export function App() {
   return (
-    <section className="panel">
-      <h2>홈</h2>
-      <p>React Router 기본 라우팅 예제입니다.</p>
-    </section>
-  );
-}
+    <div className={styles.app}>
+      <header>
+        <nav>
+          <Link to="/">Home</Link>
+          <Link to="/about">About</Link>
+          <Link to="/services">Services</Link>
+        </nav>
+      </header>
 
-function AboutPage() {
-  return (
-    <section className="panel">
-      <h2>소개</h2>
-      <p>URL과 화면을 Route로 연결합니다.</p>
-    </section>
-  );
-}
-
-export default function App() {
-  return (
-    <div className="app">
-      <h1>기본 라우팅</h1>
-      <nav aria-label="주요 메뉴">
-        <Link to="/">홈</Link>
-        <Link to="/about">소개</Link>
-      </nav>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-      </Routes>
+      <main>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+        </Routes>
+      </main>
     </div>
   );
 }

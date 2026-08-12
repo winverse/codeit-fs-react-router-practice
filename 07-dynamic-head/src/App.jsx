@@ -1,37 +1,17 @@
-import { Link, Route, Routes } from 'react-router';
+import { Routes, Route } from 'react-router';
+import { Layout } from './components/Layout';
+import { HomePage } from './pages/Home';
+import { PortfolioPage } from './pages/Portfolio';
+import { ContactPage } from './pages/Contact';
 
-function HomePage() {
+export function App() {
   return (
-    <section className="panel">
-      {/* TODO: 홈 페이지의 title과 description meta를 추가하세요. */}
-      <h2>홈</h2>
-      <p>브라우저 탭의 제목과 문서의 description 메타 정보를 확인하세요.</p>
-    </section>
-  );
-}
-
-function AboutPage() {
-  return (
-    <section className="panel">
-      {/* TODO: 소개 페이지의 title과 description meta를 추가하세요. */}
-      <h2>소개</h2>
-      <p>React 19는 컴포넌트의 title과 meta를 문서 head에 반영합니다.</p>
-    </section>
-  );
-}
-
-export default function App() {
-  return (
-    <div className="app">
-      <h1>동적 Head</h1>
-      <nav aria-label="주요 메뉴">
-        <Link to="/">홈</Link>
-        <Link to="/about">소개</Link>
-      </nav>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-      </Routes>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path="portfolio" element={<PortfolioPage />} />
+        <Route path="contact" element={<ContactPage />} />
+      </Route>
+    </Routes>
   );
 }

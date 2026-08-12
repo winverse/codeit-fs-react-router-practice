@@ -1,45 +1,19 @@
-import { Link, Outlet, Route, Routes } from 'react-router';
+import { Routes, Route } from 'react-router';
+import { Layout } from './components/Layout';
+import { HomePage } from './pages/Home';
+// TODO: ProductsPage import 하세요
+// TODO: ProductsHomePage를 import 하세요
+// TODO: CategoryPage를 import 하세요
 
-function HomePage() {
-  return <p className="panel">홈 화면입니다.</p>;
-}
-
-function CommunityPage() {
+export function App() {
   return (
-    <section className="panel">
-      <h2>커뮤니티</h2>
-      <p>게시글 목록 화면입니다.</p>
-    </section>
-  );
-}
-
-function NewPostPage() {
-  return (
-    <section className="panel">
-      <h2>글쓰기</h2>
-      <p>새 게시글 작성 화면입니다.</p>
-    </section>
-  );
-}
-
-export default function App() {
-  return (
-    <div className="app">
-      <h1>중첩 라우팅</h1>
-      <nav aria-label="주요 메뉴">
-        <Link to="/">홈</Link>
-        <Link to="/community">커뮤니티</Link>
-        <Link to="/community/new">글쓰기</Link>
-      </nav>
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/community" element={<CommunityPage />} />
-        <Route path="/community/new" element={<NewPostPage />} />
-      </Routes>
-      <p className="hint">
-        TODO: 공통 레이아웃과 커뮤니티 레이아웃을 만들고 Outlet으로 자식 화면을
-        표시하세요.
-      </p>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index={true} element={<HomePage />} />
+        {/* TODO: 1. /products 경로에 중첩 라우팅을 설정하세요 element={<ProductsPage />}*/}
+        {/* TODO: 2. /products 내부에 index route를 추가하세요 (ProductsHomePage) */}
+        {/* TODO: 3. /products 내부에 category 경로를 추가하세요 (CategoryPage) */}
+      </Route>
+    </Routes>
   );
 }
